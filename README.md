@@ -1,77 +1,64 @@
-TP1 – Integração de Sistemas de Informação (2026/27)
+# TP1 – Information Systems Integration (2026/27)
 
-Autor: Rafael Rocha Matos (a29343)
+**Author:** Rafael Rocha Matos (a29343)  
+**Degree:** BSc in Computer Systems Engineering (IPCA)
 
-Curso: Licenciatura em Engenharia de Sistemas Informáticos (IPCA)
+---
 
-Descrição do Projeto
+## Project Description
 
-Este projeto consiste no desenvolvimento de um processo de ETL (Extract, Transform, Load) para análise de telemetria de combates de um jogo. O sistema consome dados de fontes heterogéneas (CSV, JSON e XML), efetua a validação e limpeza dos mesmos (recorrendo a Expressões Regulares e tratamento de valores nulos), realiza o cruzamento de dados sequencial (Lookups) e calcula a média de DPS por arma. Os resultados finais são persistidos numa base de dados PostgreSQL e exportados para ficheiros estruturados.
+This project consists of developing an ETL (Extract, Transform, Load) process to analyse combat telemetry from a game. The system consumes data from heterogeneous sources (CSV, JSON and XML), validates and cleans it (using Regular Expressions and null-value handling), performs sequential data joins (Lookups) and calculates the average DPS per weapon. The final results are persisted in a PostgreSQL database and exported to structured files.
 
-Estrutura de Ficheiros
+---
 
-A solução encontra-se organizada na seguinte estrutura de diretórios:
+## File Structure
 
-doc/
+The solution is organised in the following directory structure:
 
-a29343_doc.pdf: Relatório final do trabalho.
+- `doc/`
+  - `a29343_doc.pdf`: Final report of the project.
+- `dataintegration/`
+  - `tr_jogadores.ktr`: Transformation responsible for extracting, validating (Regex) and cleaning the user data.
+  - `tr_combates.ktr`: Transformation responsible for reading JSON/XML, merging data (Lookups), mathematical calculations (DPS), grouping and loading.
+  - `job_principal.kjb`: Master job that orchestrates the flow, covering the success branches and the handling and logging of failures.
+- `src/`
+  - `script_database.sql`: SQL script to create the `stats_combate` table in PostgreSQL.
+- `data/input/`
+  - `jogadores.csv`: Source file with the user data.
+  - `catalogo.xml`: Structured dictionary of weapons and bosses.
+  - `telemetria.json`: Raw records of the combats performed.
+- `data/output/`
+  - `jogadores_limpos.csv`: Intermediate file generated with the validated users.
+  - `ranking.csv`: Final exported file with the DPS ranking per weapon.
+  - `log_rejeitados.txt`: Unified log file containing the records invalidated during the process (invalid e-mails and zero durations).
 
-dataintegration/
+---
 
-tr_jogadores.ktr: Transformação responsável pela extração, validação (Regex) e limpeza dos dados dos utilizadores.
+## How to Run the Solution
 
-tr_combates.ktr: Transformação responsável pela leitura de JSON/XML, fusão de dados (Lookups), cálculos matemáticos (DPS), agrupamento e carga.
+### 1. Prerequisites
 
-job_principal.kjb: Job mestre para a orquestração do fluxo, contemplando os ramos de sucesso e o tratamento e registo de falhas.
+- Install Pentaho Data Integration (Spoon).
+- Install the PostgreSQL 18 server (with the pgAdmin interface).
 
-src/
+### 2. Database Setup
 
-script_database.sql: Script SQL para a criação da tabela stats_combate no PostgreSQL.
+- Create a local database named `trabalho_isi` in PostgreSQL.
+- Run the script located at `src/script_database.sql` to create the structure of the `stats_combate` table.
 
-data/input/
+### 3. Running the ETL Process
 
-jogadores.csv: Ficheiro de origem com os dados dos utilizadores.
+- Open Pentaho Spoon and load the orchestrator file: `dataintegration/job_principal.kjb`.
+- In the `tr_combates.ktr` transformation, confirm that the PostgreSQL access credentials (host: `localhost:5432`, username and password) are correctly configured in the Table Output step.
+- Run the Job by clicking Run.
 
-catalogo.xml: Dicionário estruturado de armas e bosses.
+### 4. Checking the Results
 
-telemetria.json: Registos em bruto dos combates efetuados.
+- The `stats_combate` table in the PostgreSQL database should be populated with the weapons and their average DPS.
+- The report files (`ranking.csv` and `log_rejeitados.txt`) will be updated in the `data/output/` directory.
 
-data/output/
+---
 
-jogadores_limpos.csv: Ficheiro intermédio gerado com os utilizadores validados.
+## Demo Video
 
-ranking.csv: Ficheiro final exportado com o ranking de DPS por arma.
-
-log_rejeitados.txt: Ficheiro de log unificado contendo os registos invalidados durante o processo (e-mails inválidos e durações a zero).
-
-Como Executar a Solução
-
-1. Pré-requisitos
-
-Instalar o Pentaho Data Integration (Spoon).
-
-Instalar o servidor PostgreSQL 18 (com interface pgAdmin).
-
-2. Configuração da Base de Dados
-
-Criar uma base de dados local designada trabalho_isi no PostgreSQL.
-
-Executar o script localizado em src/script_database.sql para criar a estrutura da tabela stats_combate.
-
-3. Execução do Processo de ETL
-
-Abrir o Pentaho Spoon e carregar o ficheiro orquestrador: dataintegration/job_principal.kjb.
-
-Na transformação tr_combates.ktr, confirmar que as credenciais de acesso ao PostgreSQL (host: localhost:5432, utilizador e palavra-passe) estão corretamente configuradas no passo Table Output.
-
-Executar o Job clicando em Run.
-
-4. Verificação de Resultados
-
-A tabela stats_combate na base de dados PostgreSQL deverá estar populada com as armas e o respetivo DPS médio.
-
-Os ficheiros de relatório (ranking.csv e log_rejeitados.txt) estarão atualizados no diretório data/output/.
-
-Vídeo de Demonstração
-
-Link de acesso: https://drive.google.com/file/d/1PoCZxXenJ9IUvD5AxpHDPqI3ZefThgby/view?usp=sharing
+Access link: https://drive.google.com/file/d/1PoCZxXenJ9IUvD5AxpHDPqI3ZefThgby/view?usp=sharing
