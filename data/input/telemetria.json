@@ -1,0 +1,164 @@
+{
+  "combates": [
+    {
+      "ID_Combate": 1,
+      "ID_Jogador": 1,
+      "ID_Arma": 1,
+      "ID_Boss": 1,
+      "Dano_Causado": 1200,
+      "Duracao_Combate_Segundos": 60
+    },
+    {
+      "ID_Combate": 2,
+      "ID_Jogador": 1,
+      "ID_Arma": 1,
+      "ID_Boss": 2,
+      "Dano_Causado": 1800,
+      "Duracao_Combate_Segundos": 90
+    },
+    {
+      "ID_Combate": 3,
+      "ID_Jogador": 2,
+      "ID_Arma": 1,
+      "ID_Boss": 1,
+      "Dano_Causado": 1100,
+      "Duracao_Combate_Segundos": 55
+    },
+    {
+      "ID_Combate": 4,
+      "ID_Jogador": 3,
+      "ID_Arma": 2,
+      "ID_Boss": 2,
+      "Dano_Causado": 2500,
+      "Duracao_Combate_Segundos": 50
+    },
+    {
+      "ID_Combate": 5,
+      "ID_Jogador": 3,
+      "ID_Arma": 2,
+      "ID_Boss": 3,
+      "Dano_Causado": 2700,
+      "Duracao_Combate_Segundos": 45
+    },
+    {
+      "ID_Combate": 6,
+      "ID_Jogador": 2,
+      "ID_Arma": 2,
+      "ID_Boss": 1,
+      "Dano_Causado": 2300,
+      "Duracao_Combate_Segundos": 48
+    },
+    {
+      "ID_Combate": 7,
+      "ID_Jogador": 5,
+      "ID_Arma": 3,
+      "ID_Boss": 1,
+      "Dano_Causado": 900,
+      "Duracao_Combate_Segundos": 70
+    },
+    {
+      "ID_Combate": 8,
+      "ID_Jogador": 6,
+      "ID_Arma": 3,
+      "ID_Boss": 3,
+      "Dano_Causado": 950,
+      "Duracao_Combate_Segundos": 80
+    },
+    {
+      "ID_Combate": 9,
+      "ID_Jogador": 7,
+      "ID_Arma": 4,
+      "ID_Boss": 2,
+      "Dano_Causado": 1500,
+      "Duracao_Combate_Segundos": 100
+    },
+    {
+      "ID_Combate": 10,
+      "ID_Jogador": 8,
+      "ID_Arma": 4,
+      "ID_Boss": 3,
+      "Dano_Causado": 1400,
+      "Duracao_Combate_Segundos": 95
+    },
+    {
+      "ID_Combate": 11,
+      "ID_Jogador": 1,
+      "ID_Arma": 2,
+      "ID_Boss": 3,
+      "Dano_Causado": 2600,
+      "Duracao_Combate_Segundos": 52
+    },
+    {
+      "ID_Combate": 12,
+      "ID_Jogador": 6,
+      "ID_Arma": 1,
+      "ID_Boss": 2,
+      "Dano_Causado": 1700,
+      "Duracao_Combate_Segundos": 85
+    },
+    {
+      "ID_Combate": 13,
+      "ID_Jogador": 4,
+      "ID_Arma": 1,
+      "ID_Boss": 1,
+      "Dano_Causado": 1000,
+      "Duracao_Combate_Segundos": 0
+    },
+    {
+      "ID_Combate": 14,
+      "ID_Jogador": 4,
+      "ID_Arma": 2,
+      "ID_Boss": 1,
+      "Dano_Causado": 2400,
+      "Duracao_Combate_Segundos": 50
+    },
+    {
+      "ID_Combate": 15,
+      "ID_Jogador": 5,
+      "ID_Arma": 4,
+      "ID_Boss": 1,
+      "Dano_Causado": 1300,
+      "Duracao_Combate_Segundos": 90
+    },
+    {
+      "ID_Combate": 16,
+      "ID_Jogador": 7,
+      "ID_Arma": 3,
+      "ID_Boss": 2,
+      "Dano_Causado": 1000,
+      "Duracao_Combate_Segundos": 75
+    },
+    {
+      "ID_Combate": 17,
+      "ID_Jogador": 8,
+      "ID_Arma": 1,
+      "ID_Boss": 3,
+      "Dano_Causado": 1250,
+      "Duracao_Combate_Segundos": 65
+    },
+    {
+      "ID_Combate": 18,
+      "ID_Jogador": 2,
+      "ID_Arma": 3,
+      "ID_Boss": 1,
+      "Dano_Causado": 980,
+      "Duracao_Combate_Segundos": 72
+    },
+    {
+      "ID_Combate": 19,
+      "ID_Jogador": 3,
+      "ID_Arma": 4,
+      "ID_Boss": 3,
+      "Dano_Causado": 1450,
+      "Duracao_Combate_Segundos": 98
+    },
+    {
+      "ID_Combate": 20,
+      "ID_Jogador": 6,
+      "ID_Arma": 2,
+      "ID_Boss": 1,
+      "Dano_Causado": 2350,
+      "Duracao_Combate_Segundos": 47
+    }
+  ]
+}

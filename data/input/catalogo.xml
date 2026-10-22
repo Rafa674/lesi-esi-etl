@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+  <armas>
+    <arma>
+      <ID_Arma>1</ID_Arma>
+      <Nome_Arma>Espada Longa</Nome_Arma>
+    </arma>
+    <arma>
+      <ID_Arma>2</ID_Arma>
+      <Nome_Arma>Machado de Guerra</Nome_Arma>
+    </arma>
+    <arma>
+      <ID_Arma>3</ID_Arma>
+      <Nome_Arma>Arco Sombrio</Nome_Arma>
+    </arma>
+    <arma>
+      <ID_Arma>4</ID_Arma>
+      <Nome_Arma>Cajado Arcano</Nome_Arma>
+    </arma>
+  </armas>
+  <bosses>
+    <boss>
+      <ID_Boss>1</ID_Boss>
+      <Nome_Boss>Cavaleiro Negro</Nome_Boss>
+    </boss>
+    <boss>
+      <ID_Boss>2</ID_Boss>
+      <Nome_Boss>Dragão de Fogo</Nome_Boss>
+    </boss>
+    <boss>
+      <ID_Boss>3</ID_Boss>
+      <Nome_Boss>Rei Esquecido</Nome_Boss>
+    </boss>
+  </bosses>
+</catalogo>

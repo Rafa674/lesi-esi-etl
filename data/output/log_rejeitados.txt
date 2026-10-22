@@ -1,0 +1,2 @@
+4;email invalido
+4;duracao invalida
